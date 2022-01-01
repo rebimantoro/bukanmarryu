@@ -16,6 +16,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <input type="hidden" value="profile.jpg" name="picture">
+                        <input type="hidden" value="0" name="is_admin">
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end" >{{ __('Name') }}</label>
 

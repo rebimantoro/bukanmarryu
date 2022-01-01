@@ -18,12 +18,6 @@
                 </li>
                 <li class= "@yield('about')">
                     <a href="/admin/about">
-                        <i class="fa fa-lock"></i>
-                        <p>Admin Management</p>
-                    </a>
-                </li>
-                <li class= "@yield('about')">
-                    <a href="/admin/about">
                         <i class="fa fa-users"></i>
                         <p>User Management</p>
                     </a>

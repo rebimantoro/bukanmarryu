@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class= "@yield('about')">
-                    <a href="/admin/about">
+                    <a href="/admin/user_management">
                         <i class="fa fa-users"></i>
                         <p>User Management</p>
                     </a>

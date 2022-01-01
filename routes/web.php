@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserManagementController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,11 @@ Route::get('/register', function () {
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'productIndex']);
 Route::get('/gallery', [App\Http\Controllers\GalleryController::class, 'galleryIndex']);
 Route::get('/contact', [App\Http\Controllers\ProductController::class, 'contactIndex']);
+
+
+#admin
+Route::get('/admin/user_management', [UserManagementController::class, 'index']);
+Route::post('/admin/delete/{user}', [UserManagementController::class, 'destroy']);
 
 Auth::routes();
 

@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '1',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
             [
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '0',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
             [
@@ -35,6 +37,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '0',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
             [
@@ -43,6 +46,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '0',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
             [
@@ -51,6 +55,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '0',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
             [
@@ -59,6 +64,7 @@ class DatabaseSeeder extends Seeder
                 'no_hp' => '087689478',
                 'birthDate' => '2001-11-26',
                 'is_admin' => '0',
+                'picture' => 'profile.jpg',
                 'password' => bcrypt('123456'),
             ],
         ];

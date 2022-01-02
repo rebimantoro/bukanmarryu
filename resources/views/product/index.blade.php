@@ -25,9 +25,10 @@
            <td colspan="7" align="center"><b>No Data</b></td> 
         </tr>
         @else
+        <?php $i=1;?>
         @foreach($product as $key)
         <tr>
-        <th scope="row">1</th>
+        <th scope="row">{{ $i }}</th>
         <td>{{ $key->title }}</td>
         <td>RP.{{ $key->price }}</td>
         <td>{{ $key->categorie }}</td>
@@ -41,6 +42,7 @@
             </form>
         </td>
         </tr>
+        <?php $i++; ?>
         @endforeach
         @endif
     </tbody>

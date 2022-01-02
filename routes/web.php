@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ViewDataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,21 +31,13 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/products', function () {
-    return view('home.products');
-});
-Route::get('/gallery', function () {
-    return view('home.gallery');
-});
-Route::get('/contact', function () {
-    return view('home.contact');
-});
-Route::get('/register', function () {
-    return view('auth.register');
-});
+
+Route::get('/', [ViewDataController::class, 'index']);
+Route::get('/register', [ViewDataController::class, 'register']);
+Route::get('/products', [ViewDataController::class, 'indexProduct']);
+Route::get('/gallery', [ViewDataController::class, 'indexGallery']);
+Route::get('/contact', [ViewDataController::class, 'indexContact']);
+
 
 
 

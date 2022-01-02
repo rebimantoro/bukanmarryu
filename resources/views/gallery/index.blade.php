@@ -23,9 +23,10 @@
            <td colspan="5" align="center"><b>No Data</b></td> 
         </tr>
         @else
+        <?php $i=1;?>
         @foreach($gallery as $key)
         <tr>
-        <th scope="row">1</th>
+        <th scope="row">{{ $i }}</th>
         <td>{{ $key->title }}</td>
         <td><img src="{{asset('Template/images/'.$key->picture.'')}}" width="150px"></td>
         <td>{{ $key->desc }}</td>
@@ -37,7 +38,9 @@
             </form>
         </td>
         </tr>
+        <?php $i=$i+1; ?>
         @endforeach
+        
         @endif
     </tbody>
     </table>

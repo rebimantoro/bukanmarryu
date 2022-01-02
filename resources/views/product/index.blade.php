@@ -12,6 +12,7 @@
         <tr>
         <th scope="col">No</th>
         <th scope="col">Title</th>
+        <th scope="col">Price</th>
         <th scope="col">Categories</th>
         <th scope="col">Picture</th>
         <th scope="col">Description</th>
@@ -21,13 +22,14 @@
     <tbody>
         @if($jumlah == 0)
         <tr>
-           <td colspan="6" align="center"><b>No Data</b></td> 
+           <td colspan="7" align="center"><b>No Data</b></td> 
         </tr>
         @else
         @foreach($product as $key)
         <tr>
         <th scope="row">1</th>
         <td>{{ $key->title }}</td>
+        <td>RP.{{ $key->price }}</td>
         <td>{{ $key->categorie }}</td>
         <td><img src="{{asset('Template/images/'.$key->picture.'')}}" width="150px"></td>
         <td>{{ $key->desc }}</td>

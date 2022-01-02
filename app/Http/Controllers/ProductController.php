@@ -45,6 +45,7 @@ class ProductController extends Controller
             'title' => $request['title'],
             'desc' => $request['desc'],
             'categorie' => $request['categorie'],
+            'price' => $request['price'],
             'picture' => $pictureName,
         ]);
         return redirect('/admin/product');
@@ -66,6 +67,7 @@ class ProductController extends Controller
         $Product->title = $request->title;
         $Product->desc = $request->desc;
         $Product->categorie = $request->categorie;
+        $Product->price = $request->price;
         $Product->picture = $pictureName;
         $Product->save();
         return redirect('/admin/product');

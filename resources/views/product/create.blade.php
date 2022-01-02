@@ -13,6 +13,10 @@
     <input type="text" class="form-control" name="title">
   </div>
   <div class="mb-3">
+    <label for="exampleInputText" class="form-label">Price</label>
+    <input type="number" class="form-control" name="price">
+  </div>
+  <div class="mb-3">
     <label for="exampleInputText" class="form-label">Category</label>
     <select class="form-select" aria-label="Default select example" name="categorie">
       <option value="Man">Man</option>

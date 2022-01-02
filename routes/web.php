@@ -52,6 +52,13 @@ Route::get('/admin/gallery/{gallery}/edit', [GalleryController::class, 'edit']);
 Route::post('/admin/gallery/{gallery}', [GalleryController::class, 'update']);
 Route::post('/admin/gallery/{gallery}/delete', [GalleryController::class, 'destroy']);
 
+Route::get('/admin/product', [ProductController::class, 'productAdmin']);
+Route::get('/admin/product/create', [ProductController::class, 'create']);
+Route::post('/admin/product', [ProductController::class, 'store']);
+Route::get('/admin/product/{product}/edit', [ProductController::class, 'edit']);
+Route::post('/admin/product/{product}', [ProductController::class, 'update']);
+Route::post('/admin/product/{product}/delete', [ProductController::class, 'destroy']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

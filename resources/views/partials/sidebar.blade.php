@@ -23,25 +23,25 @@
                     </a>
                 </li>
                 <li class= "@yield('products')">
-                    <a href="/admin/products">
+                    <a href="/admin/product">
                         <i class="fa fa-shopping-bag"></i>
                         <p>Product</p>
                     </a>
                 </li>
-                <li class= "@yield('products')">
+                <li class= "@yield('gallery')">
                     <a href="/admin/gallery">
                         <i class="fa fa-picture-o"></i>
                         <p>Gallery</p>
                     </a>
                 </li>
-                <li class= "@yield('products')">
-                    <a href="/admin/testimoni">
+                <li class= "@yield('testimoni')">
+                    <a href="#">
                         <i class="fa fa-comment-o"></i>
                         <p>Testimoni</p>
                     </a>
                 </li>
                 <li class= "@yield('about')">
-                    <a href="/admin/about">
+                    <a href="#">
                         <i class="fa fa-question"></i>
                         <p>About</p>
                     </a>

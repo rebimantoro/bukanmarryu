@@ -12,11 +12,16 @@ class GalleryController extends Controller
         return view('home.gallery');
     }
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function galleryAdmin()
     {
         $gallery = Gallery::all();
         $jumlah = Gallery::count();
-        return view('gallery.index', compact('gallery','jumlah'));
+        return view('gallery.index', compact('gallery', 'jumlah'));
     }
 
     public function create()
@@ -29,7 +34,7 @@ class GalleryController extends Controller
         $request->validate([
             'picture' =>  'required|image|mimes:jpeg,png,jpg,svg',
         ]);
-        $pictureName = time().'.'.$request->picture->extension();
+        $pictureName = time() . '.' . $request->picture->extension();
         $request->picture->move(public_path('/Template/images'), $pictureName);
 
         $gallery = Gallery::create([
@@ -49,7 +54,7 @@ class GalleryController extends Controller
         $request->validate([
             'picture' =>  'required|image|mimes:jpeg,png,jpg,svg',
         ]);
-        $pictureName = time().'.'.$request->picture->extension();
+        $pictureName = time() . '.' . $request->picture->extension();
         $request->picture->move(public_path('/Template/images'), $pictureName);
         $gallery = Gallery::find($id);
 

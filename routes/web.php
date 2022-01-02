@@ -33,12 +33,19 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/products', function () {
+    return view('home.products');
+});
+Route::get('/gallery', function () {
+    return view('home.gallery');
+});
+Route::get('/contact', function () {
+    return view('home.contact');
+});
 Route::get('/register', function () {
     return view('auth.register');
 });
-Route::get('/products', [App\Http\Controllers\ProductController::class, 'productIndex']);
-Route::get('/gallery', [App\Http\Controllers\GalleryController::class, 'galleryIndex']);
-Route::get('/contact', [App\Http\Controllers\ProductController::class, 'contactIndex']);
+
 
 
 #admin

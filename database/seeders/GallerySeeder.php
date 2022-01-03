@@ -16,7 +16,7 @@ class GallerySeeder extends Seeder
     {
         $gallery = [
             [
-                'title' => 'title1',
+                'title' => 'gallery1',
                 'desc' => 'coba',
                 'picture' => '1.jpg',
             ],

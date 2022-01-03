@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Product;
+use App\Models\Gallery;
 
 class GallerySeeder extends Seeder
 {
@@ -14,17 +14,17 @@ class GallerySeeder extends Seeder
      */
     public function run()
     {
-        $product = [
+        $gallery = [
             [
                 'title' => 'title1',
-                'categori' => 'Man',
-                'picture' => 'profile.jpg',
+                'desc' => 'coba',
+                'picture' => '1.jpg',
             ],
             [],
         ];
 
-        foreach ($product as $key => $value) {
-            Product::create($value);
+        foreach ($gallery as $key => $value) {
+            Gallery::create($value);
         }
     }
 }

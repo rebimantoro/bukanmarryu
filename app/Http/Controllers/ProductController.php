@@ -7,19 +7,10 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function productIndex()
-    {
-        return view('home.products');
-    }
-
-    public function contactIndex()
-    {
-        return view('home.contact');
-    }
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('is_admin');
     }
     public function productAdmin()
     {
@@ -53,7 +44,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('Product.edit', compact('product'));
+        return view('product.edit', compact('product'));
     }
     public function update(Request $request, $id)
     {

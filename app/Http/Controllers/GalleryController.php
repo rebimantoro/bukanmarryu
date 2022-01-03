@@ -7,14 +7,9 @@ use App\Models\Gallery;
 
 class GalleryController extends Controller
 {
-    public function galleryIndex()
-    {
-        return view('home.gallery');
-    }
-
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('is_admin');
     }
 
     public function galleryAdmin()

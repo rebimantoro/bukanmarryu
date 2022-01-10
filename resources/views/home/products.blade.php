@@ -39,7 +39,8 @@ active
                         <div class="col-md-12 md-5">
                             <div class="title">
                                 <ul class="categiri">
-                                    <li class="active"><a href="#">Man</a></li>
+                                    <li class="active"><a href="#">All</a></li>
+                                    <li><a >Women</a></li>
                                     <li><a >Women</a></li>
                                     <li><a >Accessories</a></li>
                                     <li><a >Decoration</a></li>

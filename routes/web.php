@@ -38,8 +38,40 @@ Route::get('/products', [ViewDataController::class, 'indexProduct']);
 Route::get('/gallery', [ViewDataController::class, 'indexGallery']);
 Route::get('/contact', [ViewDataController::class, 'indexContact']);
 
+#booking
+Route::get('/booking', function () {
+    return view('booking.booking');
+});
 
+// cart
+Route::get('/cart', function () {
+    return view('booking.cart');
+});
 
+// tracking
+Route::get('/tracking', function () {
+    return view('booking.tracking');
+});
+
+// checkout
+Route::get('/checkout', function () {
+    return view('booking.checkout');
+});
+
+#profile
+Route::get('/profile', function () {
+    return view('home.profile');
+});
+
+#testimoni
+Route::get('/testimoni', function () {
+    return view('testimoni.index');
+});
+
+#testimoni
+Route::get('/payment', function () {
+    return view('booking.payment');
+});
 
 #admin
 Route::get('/admin/user_management', [UserManagementController::class, 'index']);

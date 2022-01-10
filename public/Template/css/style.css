@@ -1530,6 +1530,15 @@ section .section-title {
     background: #A78758 !important;
 }
 
+.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
 
 /* gallery */
 

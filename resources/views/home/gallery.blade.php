@@ -1,10 +1,15 @@
 @extends('layouts.app')
 
+@section('gallery')
+active
+@endsection
 
 @section('content')
 
 <!-- product section -->
-<section class="product_section layout_padding">
+<link href="{{ asset('Template/modal.css') }}" rel="stylesheet">
+
+<section class="product_section">
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
@@ -20,18 +25,31 @@
         @foreach ($gallery as $key)
         <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="box">
-                <div class="option_container">
-                </div>
                 <div class="img-box">
-                    <img src="{{asset('Template/images/'.$key->picture.'')}}" alt="">
+                    <img src="{{asset('Template/images/'.$key->picture.'')}}" data-toggle="modal" data-target=".bd-example-modal-lg">
                 </div>
                 </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
-        
     </div>
     @endif
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <img src="{{asset('Template/images/'.$key->picture.'')}}" >
+        </div>
+        <br>
+        <p class="text-center" style="color:white;">List of users</p>
+    </div>
+</div>
+
+
+
+
+    
 
 
 

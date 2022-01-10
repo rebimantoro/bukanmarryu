@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class= "@yield('testimoni')">
-                    <a href="#">
+                    <a href="/testimoni">
                         <i class="fa fa-comment-o"></i>
                         <p>Testimoni</p>
                     </a>

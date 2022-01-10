@@ -14,7 +14,7 @@ class ProductController extends Controller
     }
     public function productAdmin()
     {
-        $product = Product::all();
+        $product = Product::paginate(5);
         $jumlah = Product::count();
         return view('product.index', compact('product', 'jumlah'));
     }

@@ -16,11 +16,35 @@ class GallerySeeder extends Seeder
     {
         $gallery = [
             [
-                'title' => 'gallery1',
-                'desc' => 'coba',
+                'title' => 'Javanese',
+                'desc' => 'indonesian Style',
                 'picture' => '1.jpg',
             ],
-            [],
+            [
+                'title' => 'Christian',
+                'desc' => 'Pernikahan gaya barat',
+                'picture' => '2.jpg',
+            ],
+            [
+                'title' => 'Javanese',
+                'desc' => 'Pernikahan adat Jawa',
+                'picture' => '3.jpg',
+            ],
+            [
+                'title' => 'Gedung Nikah',
+                'desc' => 'Foto gedung pernikahan',
+                'picture' => '4.jpg',
+            ],
+            [
+                'title' => 'Sundanese',
+                'desc' => 'Pernikahan adat Sunda',
+                'picture' => '5.jpg',
+            ],
+            [
+                'title' => 'British',
+                'desc' => 'Pernikahan gaya western',
+                'picture' => '6.jpeg',
+            ],
         ];
 
         foreach ($gallery as $key => $value) {

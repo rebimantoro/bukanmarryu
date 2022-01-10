@@ -22,7 +22,7 @@
     <tbody>
         @if($jumlah == 0)
         <tr>
-           <td colspan="7" align="center"><b>No Data</b></td> 
+            <td colspan="7" align="center"><b>No Data</b></td> 
         </tr>
         @else
         <?php $i=1;?>
@@ -30,7 +30,7 @@
         <tr>
         <th scope="row">{{ $i }}</th>
         <td>{{ $key->title }}</td>
-        <td>RP.{{ $key->price }}</td>
+        <td>{{ $key->price }}</td>
         <td>{{ $key->categorie }}</td>
         <td><img src="{{asset('Template/images/'.$key->picture.'')}}" width="150px"></td>
         <td>{{ $key->desc }}</td>
@@ -47,5 +47,11 @@
         @endif
     </tbody>
     </table>
+    
+    <div class="pagination justify-content-center mt-5">
+
+{{$product -> links()}}
+
+</div>
 </div>
 @endsection

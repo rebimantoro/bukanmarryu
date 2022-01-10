@@ -16,10 +16,22 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item @yield('home')">
+                    <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                    
+                <li class="nav-item @yield('products')">
+                    <a class="nav-link" href="/products">Products</a>
+                </li>
+                
+                <li class="nav-item @yield('gallery')">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item @yield('contact')">
+                    <a class="nav-link" href="/contact">About</a>
+                </li>
+
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">
@@ -38,12 +50,13 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="#" class="dropdown-item">Profile</a>
-                            <a href="#" class="dropdown-item">Booking</a>
+                            <a href="/profile" class="dropdown-item">Profile</a>
+                            <a href="/cart" class="dropdown-item">Cart</a>
+                            <a href="/booking" class="dropdown-item">My Booking</a>
                             <hr class="dropdown-divider">
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                                onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

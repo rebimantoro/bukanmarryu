@@ -26,7 +26,7 @@ class ViewDataController extends Controller
     }
     public function indexProduct()
     {
-        $product = Product::all();
+        $product = Product::paginate(6);
         return view('Home.products', compact('product'));
     }
     public function indexContact()

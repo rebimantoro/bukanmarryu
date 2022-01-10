@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
-
+@section('products')
+active
+@endsection
 
 @section('content')
 
 <!-- product section -->
-<section class="product_section layout_padding">
+<section class="product_section">
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
@@ -19,28 +21,29 @@
         <div class="Search my-5">
             <div class="row height d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
-                    <form action="">
+                    <form action="/products">
                     <div class="input-group rounded">
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                            <i class="fa fa-search"></i>
-                        </span>
+                        <input type="search" name="search" style="height=20px;" class="form-control rounded" placeholder="Cari Product Disini" aria-label="Search" aria-describedby="search-addon" />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
         <div class="text-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 md-5">
-                            <div class="title ">
+                            <div class="title">
                                 <ul class="categiri">
                                     <li class="active"><a href="#">Man</a></li>
-                                    <li><a style="color:black" href="#">Women</a></li>
-                                    <li><a style="color:black" href="#">Accessories</a></li>
-                                    <li><a style="color:black" href="#">Decoration</a></li>
-                                    <li><a style="color:black" href="#">Other</a></li>
+                                    <li><a >Women</a></li>
+                                    <li><a >Accessories</a></li>
+                                    <li><a >Decoration</a></li>
+                                    <li><a >Other</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -50,7 +53,8 @@
 
 <!-- produk 1 -->
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3">
+    @foreach ($product as $key)
+        <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="box">
                 <div class="option_container">
                     <!-- pilihan hover -->
@@ -58,45 +62,37 @@
                         <a href="" class="option1">
                             Add to Cart
                         </a>
-                        <a href="" class="option2">
+                        <a href="/checkout" class="option2">
                             Booking Now
                         </a>
                     </div>
                 </div>
                 <div class="img-box">
-                    <img src="{{asset('Template/images/p1.png')}}" alt="">
+                    <img src="{{asset('Template/images/'.$key->picture.'')}}" alt="">
                 </div>
                 <div class="detail-box">
                     <h5>
-                        Men's Shirt
+                    {{ $key->title }}
                     </h5>
                     <h6>
-                        $75
+                    {{ $key->price }}
                     </h6>
                 </div>
             </div>
             </div>
-
-
+    @endforeach
         </div>
     </div>
 
-    <!-- pagination -->
-        <br>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
 
-                <li class="page-item"><a style="color:black;" class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a style="color:black;" class="page-link" href="#">2</a></li>
-                <li class="page-item"><a style="color:black;" class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                <a style="color:black;" class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
+    <!-- pagination -->
+
+        <div class="pagination justify-content-center mt-5">
+
+        {{$product -> links()}}
+
+        </div>
+
 
     </div>
 

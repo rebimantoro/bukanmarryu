@@ -32,7 +32,7 @@
                     <input class="form-control" type="file" id="bukti_transfer" name="bukti_transfer">
                     </div>
                     <div class="mb-3" style="float: left;">
-                    <button class="btn" style="background-color: lightseagreen;color: white;" type="submit">Kirim</button>
+                    <a href="/booking"class="btn" style="background-color: lightseagreen;color: white;" type="submit">Kirim</a>
                     </div>
                 </form>
                 </div>

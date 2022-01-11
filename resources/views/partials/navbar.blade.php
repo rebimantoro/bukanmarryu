@@ -51,7 +51,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a href="/profile" class="dropdown-item">Profile</a>
-                            <a href="/cart" class="dropdown-item">Cart</a>
+                            <a href="/cart/{{ Auth::user()->id }}" class="dropdown-item">Cart</a>
                             <a href="/booking" class="dropdown-item">My Booking</a>
                             <hr class="dropdown-divider">
                             <a class="dropdown-item" href="{{ route('logout') }}"

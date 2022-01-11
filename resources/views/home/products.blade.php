@@ -39,8 +39,7 @@ active
                         <div class="col-md-12 md-5">
                             <div class="title">
                                 <ul class="categiri">
-                                    <li class="active"><a href="#">All</a></li>
-                                    <li><a >Women</a></li>
+                                    <li class="active"><a href="#">Man</a></li>
                                     <li><a >Women</a></li>
                                     <li><a >Accessories</a></li>
                                     <li><a >Decoration</a></li>
@@ -60,9 +59,23 @@ active
                 <div class="option_container">
                     <!-- pilihan hover -->
                     <div class="options">
-                        <a href="" class="option1">
+                        @guest
+                        <a href="/login" class="option1">
                             Add to Cart
                         </a>
+                        @else
+                        <form action="/cart/{{ $key->id }}" method="post">
+                        @csrf
+                        <input type="hidden" value="{{Auth::user()->id }}" name="user_id">
+                        <input type="hidden" value="{{ $key->id }}" name="product_id">
+                        <input type="hidden" value="{{ $key->title }}" name="title">
+                        <input type="hidden" value="{{ $key->price }}" name="price">
+                        <input type="hidden" value="1" name="quantity">
+                        <input type="hidden" value="{{ $key->picture}}" name="picture">
+                        <button type="submit" class="btn option1">Add to Cart</button>
+                        </form>
+                        
+                        @endguest
                         <a href="/checkout" class="option2">
                             Booking Now
                         </a>

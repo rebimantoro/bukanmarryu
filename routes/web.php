@@ -7,6 +7,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ViewDataController;
+use App\Http\Controllers\APIController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,7 @@ use App\Http\Controllers\ViewDataController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
@@ -44,9 +47,11 @@ Route::get('/booking', function () {
 });
 
 // cart
-Route::get('/cart', function () {
-    return view('booking.cart');
-});
+Route::get('/cart/{id}', [CartController::class, 'index'])->name('cart');
+Route::post('/cart/{id}', [CartController::class, 'createCart']);
+Route::post('/minus/{id}', [CartController::class, 'minus']);
+Route::post('/plus/{id}', [CartController::class, 'plus']);
+Route::post('/destroy/{id}', [CartController::class, 'destroy']);
 
 // tracking
 Route::get('/tracking', function () {
@@ -99,3 +104,5 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/coba', [APIController::class, 'index']);

@@ -404,10 +404,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>
@@ -430,10 +430,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>
@@ -456,10 +456,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>
@@ -482,10 +482,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>
@@ -508,10 +508,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>
@@ -533,10 +533,10 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="/products" class="option1">
                            Add To Cart
                            </a>
-                           <a href="" class="option2">
+                           <a href="/products" class="option2">
                            Booking Now
                            </a>
                         </div>

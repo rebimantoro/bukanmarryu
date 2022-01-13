@@ -26,26 +26,28 @@ active
         <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="box">
                 <div class="img-box">
-                    <img src="{{asset('Template/images/'.$key->picture.'')}}" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <img src="{{asset('Template/images/'.$key->picture.'')}}" data-toggle="modal" data-target="#coba{{ $key->id }}">
                 </div>
                 </div>
             </div>
-            @endforeach
+            <div class="modal fade" id="coba{{ $key->id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <img src="{{asset('Template/images/'.$key->picture.'')}}" >
+                    </div>
+                    <br>
+                    <h5 align="center" style="color:white;">Style : {{ $key->title }}</h5>
+                    <p class="text-center" style="color:white;">{{ $key->desc }}</p>
+                </div>
+            </div>
+        @endforeach
         </div>
     </div>
-    @endif
+    
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <img src="{{asset('Template/images/'.$key->picture.'')}}" >
-        </div>
-        <br>
-        <p class="text-center" style="color:white;">List of users</p>
-    </div>
-</div>
 
+@endif
 
 
 

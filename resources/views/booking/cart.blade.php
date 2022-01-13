@@ -94,8 +94,15 @@
                         $tambah = $key->price * $key->quantity;
                         $total= $total+ $tambah;
                     }
+                    $diskon = $total - $total*0.2;
                     ?>
-                    <h1>Rp.{{ $total }}</h1>
+                    @if ($total==0)
+                    <h3>Rp.{{ $total }}</h3>
+                    @else
+                    <del><h3>Rp.{{ $total }}</h1></del>
+                    <h3>Rp.{{ $diskon }}</h1> 
+                    @endif
+                    
                 </div>
             </div>
         </div>

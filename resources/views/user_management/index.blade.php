@@ -1,8 +1,15 @@
 @extends('layouts.adminLayout')
+@section ('user')
+active
+@endsection
 @section('konten')
-<br> <br><br> <br>
 <div class="container">
-    <table class="table table-striped">
+  <h3 align="center" class="mt-5">Users List</h3>
+  <hr>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <table class="table table-striped">
         <tr>
         <th>No</th>
         <th>Name</th>
@@ -47,6 +54,10 @@
           </div>
         @endforeach
     </table>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
     
 
 </div>

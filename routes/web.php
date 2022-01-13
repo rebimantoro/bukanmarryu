@@ -23,6 +23,7 @@ use App\Http\Controllers\BookingController;
 
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('admin/home/{id}', [HomeController::class, 'adminEditHome'])->middleware('is_admin');
 
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +42,6 @@ Route::get('/register', [ViewDataController::class, 'register']);
 Route::get('/products', [ViewDataController::class, 'indexProduct']);
 Route::get('/gallery', [ViewDataController::class, 'indexGallery']);
 Route::get('/contact', [ViewDataController::class, 'indexContact']);
-
-#booking
-Route::get('/booking', function () {
-    return view('booking.booking');
-});
 
 // cart
 Route::get('/cart/{id}', [CartController::class, 'index'])->name('cart');
@@ -102,6 +98,7 @@ Route::post('/admin/product/{product}/delete', [ProductController::class, 'destr
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Auth::routes();
 

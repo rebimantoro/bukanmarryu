@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Booking;
 
 class HomeController extends Controller
 {
@@ -33,6 +34,14 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        return view('adminHome');
+        $booking = Booking::all();
+        return view('adminHome', compact('booking'));
+    }
+
+    public function adminEditHome($id)
+    {
+        $bookings = Booking::all();
+        $booking = $bookings->intersect(Booking::whereIn('id', [$id])->get());
+        return view('adminEditHome', compact('booking'));
     }
 }

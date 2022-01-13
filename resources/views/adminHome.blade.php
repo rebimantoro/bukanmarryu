@@ -1,96 +1,105 @@
 @extends('layouts.adminLayout')
+@section ('home')
+active
+@endsection
 @section('konten')
-<!-- konten -->
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="description">Bookings</h3>
+<?php 
+$success = 0;
+$failed =0;
+$ongoing = 0;
+$turn = 0;
 
-        <div class="container mt-5 mb-5 p-5" style="background-color:white">
-            <table class="table table-striped">
-            <h3 class="description">Tiara Dwi Syaputri</h3>
-                <tr>
-                    <th>No</th>
-                    <th>Tanggal</th>
-                    <th>Durasi</th>
-                    <th>Produk</th>
-                    <th>Harga</th>
-                    <th>Foto Produk</th>
-                    <th>Aksi</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>2021/12/12</td>
-                    <td>1 jam</td>
-                    <td>Dress</td>
-                    <td>Rp.70000</td>
-                    <td><img style="height:80px;width:auto;" src="{{asset('Template/images/p7.png')}}"></td>
-                    
-                    <td>
-                        <div>
-                        <a class="btn btn-success" href="#" role="button">Accept</a>
-                        <a class="btn btn-danger" href="#" role="button">Reject</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><b>Total</b></td>
-                    <td>Rp.70000</td>
-                    <td></td>
-                </tr>
-            </table>
-            </div>
-
-            <div class="container mt-5 mb-5 p-5" style="background-color:white">
-            <table class="table table-striped">
-            <h3 class="description">Bima</h3>
-                <tr>
-                    <th>No</th>
-                    <th>Tanggal</th>
-                    <th>Durasi</th>
-                    <th>Produk</th>
-                    <th>Harga</th>
-                    <th>Foto Produk</th>
-                    <th>Aksi</th>
-                </tr>
-
-                <tr>
-                    <td>1</td>
-                    <td>2021/12/12</td>
-                    <td>1 jam</td>
-                    <td>Dress</td>
-                    <td>Rp.70000</td>
-                    <td><img style="height:80px;width:auto;" src="{{asset('Template/images/p2.png')}}"></td>
-                    
-                    <td>
-                        <div>
-                        <a class="btn btn-success" href="#" role="button">Accept</a>
-                        <a class="btn btn-danger" href="#" role="button">Reject</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><b>Total</b></td>
-                    <td>Rp.70000</td>
-                    <td></td>
-                </tr>
-            </table>
-            </div>
-
-
-
-
+foreach($booking as $key){
+    if($key->status == 'Dikirim'){
+        $success++;
+        $turn += $key->total_price;
+    }
+    elseif($key->status == 'Gagal'){
+        $failed++;
+    }
+    else{
+        $ongoing++;
+    }
+}
+?>
+<div class="container">
+<h3 align="center" class="mt-5">Order List</h3>
+<hr>
+<div class="row">
+    <div class="col">
+        <h5 align="center">Success Transaction</h5>
+        <p class="text-success" align="center"> <b> {{ $success }}</b></p>
+    </div>
+    <div class="col">
+        <h5 align="center">Failed Transaction</h5>
+        <p align="center" class="text-danger"> <b>{{ $failed }}</b> </p>
+    </div>
+    <div class="col">
+        <h5 align="center">On Going Transaction</h5>
+        <p align="center" class="text-primary"> <b>{{ $ongoing }}</b> </p>
+    </div>
+    <div class="col">
+        <h5 align="center">Turnover</h5>
+        <p align="center" class="text-success"> <b>Rp.{{ $turn }}</b> </p>
+    </div>
+<hr>
+</div>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <table class="table table-striped">
+            <tr>
+             <th>No</th>
+             <th>Customer</th>
+             <th>Booking ID</th>
+             <th>Total Price</th>
+             <th>Detail</th>
+             <th>Action</th>
+            </tr>
+            <?php $no = 1;?>
+            @foreach($booking as $key)
+            <tr>
+                <th>{{ $no }}</th>
+                <th>{{ $key->username}}</th>
+                <th>{{ $key->id }}</th>
+                <th>Rp.{{ $key->total_price }}</th>
+                <th><a href="/admin/home/{{ $key->id }}" class="btn btn-primary">Detail</a></th>
+                <th>
+                <div class="d-flex flex-row bd-highlight">
+                    <select name="status" class="form-control">
+                        @if ($key->status == "Belum Terkonfirmasi")
+                        <option value="{{ $key->status }}">{{ $key->status }}</option>
+                        <option value="Terkonfirmasi">Terkonfirmasi</option>
+                        <option value="Dikirim">Dikirim</option>
+                        <option value="Gagal">Gagal</option>
+                        @elseif($key->status == "Terkonfirmasi")
+                        <option value="{{ $key->status }}">{{ $key->status }}</option>
+                        <option value="Terkonfirmasi">Belum Terkonfirmasi</option>
+                        <option value="Dikirim">Dikirim</option>
+                        <option value="Gagal">Gagal</option>
+                        @elseif($key->status == "Dikirim")
+                        <option value="{{ $key->status }}">{{ $key->status }}</option>
+                        <option value="Terkonfirmasi">Terkonfirmasi</option>
+                        <option value="Dikirim">Belum Terkonfirmasi</option>
+                        <option value="Gagal">Gagal</option>
+                        @elseif($key->status == "Gagal")
+                        <option value="{{ $key->status }}">{{ $key->status }}</option>
+                        <option value="Terkonfirmasi">Terkonfirmasi</option>
+                        <option value="Dikirim">Dikirim</option>
+                        <option value="Gagal">Belum Terkonfirmasi</option>
+                        @endif
+                    </select>
+                    <button  class="btn btn-warning ms-2">Update</button>
+                </div>
+                </th>
+            </tr>
+            <?php $no = $no+1;?>
+            @endforeach
+        </table>
+    </div>
+    <div class="col-1"></div>
+</div>
+</div>
 @endsection
 
 

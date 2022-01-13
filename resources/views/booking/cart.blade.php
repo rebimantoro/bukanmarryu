@@ -27,7 +27,7 @@
                             <th style="width:12%">Price/Item</th>
                             <th style="width:10%">Quantity</th>
                             <th style="width:12%">Total Price</th>
-                            <th style="width:16%"></th>
+                            <th style="width:16%">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,12 +51,12 @@
                             </td>
                             <td data-th="Price">Rp.{{ $price }}</td>
                             <td class="actions" data-th="">
-                                <div class="text-right">
+                                <div class="d-flex flex-row bd-highlight">
                                     <form action="/minus/{{ $key->id }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="user_id" value="{{ $key->user_id}}">
                                         <input type="hidden" name="product_id" value="{{ $key->product_id}}">
-                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2 me-1">
                                             <i class="fa fa-minus"></i>
                                         </button>
                                     </form>
@@ -65,7 +65,7 @@
                                         @csrf
                                         <input type="hidden" name="user_id" value="{{ $key->user_id}}">
                                         <input type="hidden" name="product_id" value="{{ $key->product_id}}">
-                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2 me-1">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </form>
@@ -74,7 +74,7 @@
                                         @csrf
                                         <input type="hidden" name="user_id" value="{{ $key->user_id}}">
                                         <input type="hidden" name="product_id" value="{{ $key->product_id}}">
-                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2">
+                                        <button type="submit" class="btn btn-white border-secondary bg-white btn-md mb-2 me-1">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>

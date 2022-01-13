@@ -25,6 +25,9 @@ use App\Http\Controllers\BookingController;
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('admin/home/{id}', [HomeController::class, 'adminEditHome'])->middleware('is_admin');
 Route::post('admin/home/update', [HomeController::class, 'adminUpdateHome'])->name('adminUpdate');
+Route::get('admin/testimoni', [BookingController::class, 'testimoniIndex']);
+Route::get('admin/testimoni/show/{id}', [BookingController::class, 'testimoniShow']);
+Route::get('admin/testimoni/hide/{id}', [BookingController::class, 'testimoniHide']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,21 +55,14 @@ Route::post('/minus/{id}', [CartController::class, 'minus']);
 Route::post('/plus/{id}', [CartController::class, 'plus']);
 Route::post('/destroy/{id}', [CartController::class, 'destroy']);
 
-// tracking
-Route::get('/tracking', function () {
-    return view('booking.tracking');
-});
 
 // booking
 Route::get('/checkout/{id}', [BookingController::class, 'index']);
 Route::post('/payment/{id}', [BookingController::class, 'indexPay']);
 Route::post('/booking/{id}', [BookingController::class, 'payment']);
 Route::get('/booking/{id}', [BookingController::class, 'bookingIndex']);
+Route::post('/booking/feedback/{id}', [BookingController::class, 'bookingFeedback']);
 
-#testimoni
-Route::get('/testimoni', function () {
-    return view('testimoni.index');
-});
 
 #testimoni
 Route::get('/payment', function () {

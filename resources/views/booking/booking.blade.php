@@ -34,7 +34,10 @@
                     <li class="list-group-item">Status : <b>{{ $key->status }}</b> </b></li>
                     <li class="list-group-item">
                     @if ($key->status=="Dikirim")
+                    @if ($key->feedback=="no")
                     <button class="btn" style="background-color:blue ;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#feedback{{ $key->id }}">Berikan Feedback</button>
+                    @else
+                    @endif
                     @else
                     <button class="btn" style="background-color:grey ;color:white;font-size: 0.9rem;">Berikan Feedback</button>
                     @endif
@@ -72,16 +75,24 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Terimakasih</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Terimakasih telah memilih MarryU</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
+                      <form action="/booking/feedback/{{ $key->id }}" method="POST">
+                        @csrf
+                        <input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
+                        <input type="hidden" value="{{ $key->first_name }} {{ $key->last_name }}" name="name">
+                        <input type="hidden" value="no" name="show">
+                        <input type="hidden" value="yes" name="feedback">
                       <div class="modal-body">
-                        ...
+                          <p>Feedback anda akan sangat berguna untuk startup seperti kami, oleh karena itu , silahkan isi feedback :D</p>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc"></textarea>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                       </div>
+                    </form>
                     </div>
                   </div>
             </div>

@@ -600,120 +600,32 @@ active
                      </div>
                   </div>
 
+                  @foreach($feedback as $key)
+                  @if ($key->show == "yes")
                   <div class="carousel-item">
                      <div class="box col-lg-10 mx-auto">
                         <div class="img_container">
                            <div class="img-box">
                               <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/user2.jpg')}}" alt="">
+                                 <img src="{{asset('Template/images/profile.jpg')}}" alt="">
                               </div>
                            </div>
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Muh. Taufiqurrahman
+                              {{ $key->name }}
                            </h5>
                            <h6>
                               Customer
                            </h6>
                            <p>
-                              Saya sempat bingung apa yang harus saya pakai saat pernikahan saya, namun website ini memberikan pilihan yang cukup banyak dan hal itu memberikan saya inspirasi mengenai apa yang saya pakai saat pernikahan
+                              {{ $key->desc }}
                            </p>
                         </div>
                      </div>
                   </div>
-
-                  <div class="carousel-item">
-                     <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                           <div class="img-box">
-                              <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/user3.jpg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Tiara Dwi Syaputri
-                           </h5>
-                           <h6>
-                              Customer
-                           </h6>
-                           <p>
-                              Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="carousel-item">
-                     <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                           <div class="img-box">
-                              <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/user4.jpg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Pradita Cahyani
-                           </h5>
-                           <h6>
-                              Customer
-                           </h6>
-                           <p>
-                              Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="carousel-item">
-                     <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                           <div class="img-box">
-                              <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/user5.jpg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Muhammad Rizal Bimantoro
-                           </h5>
-                           <h6>
-                              Customer
-                           </h6>
-                           <p>
-                              Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="carousel-item">
-                     <div class="box col-lg-10 mx-auto">
-                        <div class="img_container">
-                           <div class="img-box">
-                              <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/user6.jpg')}}" alt="">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="detail-box">
-                           <h5>
-                              Fitria Dewi Wulandari
-                           </h5>
-                           <h6>
-                              Customer
-                           </h6>
-                           <p>
-                              Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya
-                           </p>
-                        </div>
-                     </div>
-                  </div>
+                  @endif
+                  @endforeach
 
                </div>
 

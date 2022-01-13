@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Gallery;
 use App\Models\User;
+use App\Models\Feedback;
 use Illuminate\Support\Facades\Hash;
 
 class ViewDataController extends Controller
@@ -14,7 +15,8 @@ class ViewDataController extends Controller
     {
         $gallery = Gallery::all();
         $product = Product::all();
-        return view('Home', compact('gallery', 'product'));
+        $feedback = Feedback::all();
+        return view('Home', compact('gallery', 'product', 'feedback'));
     }
     public function register()
     {

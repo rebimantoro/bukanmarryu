@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Booking;
+use App\Models\Feedback;
 
 class BookingController extends Controller
 {
@@ -20,6 +21,21 @@ class BookingController extends Controller
         $bookings = Booking::all();
         $booking = $bookings->intersect(Booking::whereIn('id_user', [$id])->get());
         return view('booking.booking', compact('booking'));
+    }
+
+    public function bookingFeedback(Request $request, $id)
+    {
+        $feedback = Feedback::create([
+            'id_booking' => $id,
+            'id_user' => $request['id_user'],
+            'name' => $request['name'],
+            'desc' => $request['desc'],
+            'show' => $request['show'],
+        ]);
+        $booking = Booking::find($id);
+        $booking->feedback = $request->feedback;
+        $booking->save();
+        return redirect()->to('booking/' . $request->id_user);
     }
 
     public function indexPay($id, Request $request)
@@ -64,5 +80,27 @@ class BookingController extends Controller
         $bookings = Booking::all();
         $booking = $bookings->intersect(Booking::whereIn('id_user', [$request->id_user])->get());
         return view('booking.booking', compact('booking'));
+    }
+
+    public function testimoniIndex()
+    {
+        $feedback = Feedback::all();
+        return view('testimoni.index', compact('feedback'));
+    }
+
+    public function testimoniShow($id)
+    {
+        $feedback = Feedback::find($id);
+        $feedback->show = "yes";
+        $feedback->save();
+        return redirect('/admin/testimoni');
+    }
+
+    public function testimoniHide($id)
+    {
+        $feedback = Feedback::find($id);
+        $feedback->show = "no";
+        $feedback->save();
+        return redirect('/admin/testimoni');
     }
 }

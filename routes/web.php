@@ -9,6 +9,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ViewDataController;
 use App\Http\Controllers\APIController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,10 +59,9 @@ Route::get('/tracking', function () {
     return view('booking.tracking');
 });
 
-// checkout
-Route::get('/checkout', function () {
-    return view('booking.checkout');
-});
+// booking
+Route::get('/checkout/{id}', [BookingController::class, 'index']);
+
 
 #profile
 Route::get('/profile', function () {

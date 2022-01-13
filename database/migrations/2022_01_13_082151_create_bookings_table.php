@@ -17,7 +17,6 @@ class CreateBookingsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('id_user');
-            $table->string('booking');
             $table->string('product');
             $table->string('username');
             $table->string('first_name');
@@ -32,6 +31,7 @@ class CreateBookingsTable extends Migration
             $table->string('total_item');
             $table->string('proof');
             $table->string('status');
+            $table->string('feedback');
         });
     }
 

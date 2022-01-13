@@ -33,11 +33,57 @@
                     <li class="list-group-item">Total Harga : <b>Rp.{{ $key->total_price }}</b></li>
                     <li class="list-group-item">Status : <b>{{ $key->status }}</b> </b></li>
                     <li class="list-group-item">
-                    <button class="btn" style="background-color:blue ;color:white;font-size: 0.9rem;">Berikan Feedback</button>
-                    <button class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;">Detail</button>
+                    @if ($key->status=="Dikirim")
+                    <button class="btn" style="background-color:blue ;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#feedback{{ $key->id }}">Berikan Feedback</button>
+                    @else
+                    <button class="btn" style="background-color:grey ;color:white;font-size: 0.9rem;">Berikan Feedback</button>
+                    @endif
+                    <button class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#detail{{ $key->id }}">Detail</button>
                     </li>
                 </ul>
                 </div>
+            </div>
+            <div class="modal fade" id="detail{{ $key->id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Detail Pesanan No {{ $no }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Hallo, <b>{{ $key->first_name }} {{ $key->last_name }}</b> <br>
+                        Anda telah berbelanja pada di MarryU <b>{{ $key->created_at }}</b><br> <br>
+                        Dengan Pesanan : <br>
+                        <b>{{ $key->product }}</b><br><br>
+                        Anda mendapatkan diskon 20%,
+                        sehingga anda hanya perlu membayar sebanyak <b>Rp.{{ $key->total_price }} </b> 
+                        atau <b>Rp.{{ $key->total_price_before_discount - $key->total_price }}</b> lebih hemat. <br><br>
+
+                        Terimakasih telah berbelanja di MarryU, Kami harap dapat memberikan pelayanan yang baik lagi untuk anda kedepanya!
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="modal fade" id="feedback{{ $key->id }}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Terimakasih</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
             </div>
             <?php $no= $no+1?>
             @endforeach

@@ -24,7 +24,7 @@ use App\Http\Controllers\BookingController;
 
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 Route::get('admin/home/{id}', [HomeController::class, 'adminEditHome'])->middleware('is_admin');
-
+Route::post('admin/home/update', [HomeController::class, 'adminUpdateHome'])->name('adminUpdate');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +42,8 @@ Route::get('/register', [ViewDataController::class, 'register']);
 Route::get('/products', [ViewDataController::class, 'indexProduct']);
 Route::get('/gallery', [ViewDataController::class, 'indexGallery']);
 Route::get('/contact', [ViewDataController::class, 'indexContact']);
+Route::get('/profile/{id}', [ViewDataController::class, 'indexProfile']);
+Route::post('/profile/{id}/update', [ViewDataController::class, 'updateProfile'])->name('profileUpdate');
 
 // cart
 Route::get('/cart/{id}', [CartController::class, 'index'])->name('cart');
@@ -60,12 +62,6 @@ Route::get('/checkout/{id}', [BookingController::class, 'index']);
 Route::post('/payment/{id}', [BookingController::class, 'indexPay']);
 Route::post('/booking/{id}', [BookingController::class, 'payment']);
 Route::get('/booking/{id}', [BookingController::class, 'bookingIndex']);
-
-
-#profile
-Route::get('/profile', function () {
-    return view('home.profile');
-});
 
 #testimoni
 Route::get('/testimoni', function () {

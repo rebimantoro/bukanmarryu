@@ -59,12 +59,15 @@ foreach($booking as $key){
             <?php $no = 1;?>
             @foreach($booking as $key)
             <tr>
-                <th>{{ $no }}</th>
-                <th>{{ $key->username}}</th>
-                <th>{{ $key->id }}</th>
-                <th>Rp.{{ $key->total_price }}</th>
-                <th><a href="/admin/home/{{ $key->id }}" class="btn btn-primary">Detail</a></th>
-                <th>
+                <td>{{ $no }}</td>
+                <td>{{ $key->username}}</td>
+                <td>{{ $key->id }}</td>
+                <td>Rp.{{ $key->total_price }}</td>
+                <td><a href="/admin/home/{{ $key->id }}" class="btn btn-primary">Detail</a></td>
+                <td>
+            <form action="{{ route('adminUpdate') }}" method="POST">
+                @csrf
+                <input type="hidden" value={{ $key->id }} name="id">
                 <div class="d-flex flex-row bd-highlight">
                     <select name="status" class="form-control">
                         @if ($key->status == "Belum Terkonfirmasi")
@@ -89,9 +92,10 @@ foreach($booking as $key){
                         <option value="Gagal">Belum Terkonfirmasi</option>
                         @endif
                     </select>
-                    <button  class="btn btn-warning ms-2">Update</button>
+                    <button type="submit" class="btn btn-warning ms-2">Update</button>
                 </div>
-                </th>
+            </form>
+                </td>
             </tr>
             <?php $no = $no+1;?>
             @endforeach

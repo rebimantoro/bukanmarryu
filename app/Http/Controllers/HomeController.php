@@ -44,4 +44,12 @@ class HomeController extends Controller
         $booking = $bookings->intersect(Booking::whereIn('id', [$id])->get());
         return view('adminEditHome', compact('booking'));
     }
+
+    public function adminUpdateHome(Request $request)
+    {
+        $booking = Booking::find($request->id);
+        $booking->status = $request->status;
+        $booking->save();
+        return redirect('/admin/home');
+    }
 }

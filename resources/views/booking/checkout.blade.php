@@ -66,7 +66,7 @@
             <form class="needs-validation" method="POST" action="/payment/{{ Auth::user()->id }}">
                 @csrf
                 <input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
-                <input type="hidden" value="@foreach($cart as $key) {{ $key->title }} x {{ $key->quantity }} ({{ $key->price * $key->quantity}}) | @endforeach" name="id_user">
+                <input type="hidden" value="@foreach($cart as $key) {{ $key->title }} x {{ $key->quantity }} ({{ $key->price * $key->quantity}}) | @endforeach" name="product">
                 <input type="hidden" value="{{ $total }}" name="total_price_before_discount">
                 <input type="hidden" value="{{ $diskon }}" name="total_price">
                 <input type="hidden" value="{{ $jumlah }}" name="total_item">
@@ -101,13 +101,13 @@
                 <div class="mb-3">
                     <label for="no_hp">Phone Number</label>
                     <div class="input-group">
-                        <input type="number" class="form-control" id="no_hp" value="{{ Auth::user()->no_hp }}" required name="username">
+                        <input type="number" class="form-control" id="no_hp" value="{{ Auth::user()->no_hp }}" required name="no_hp">
                     </div>
                     </div>
 
                 <div class="mb-3">
                 <label for="username">E-Mail</label>
-                <input type="email" class="form-control" id="email" value="{{ Auth::user()->email }}" readonly>
+                <input type="email" class="form-control" id="email" value="{{ Auth::user()->email }}" readonly name="email">
                 <div class="invalid-feedback">
                     Please enter a valid email address for shipping updates.
                 </div>

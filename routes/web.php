@@ -61,6 +61,9 @@ Route::get('/tracking', function () {
 
 // booking
 Route::get('/checkout/{id}', [BookingController::class, 'index']);
+Route::post('/payment/{id}', [BookingController::class, 'indexPay']);
+Route::post('/booking/{id}', [BookingController::class, 'payment']);
+Route::get('/booking/{id}', [BookingController::class, 'bookingIndex']);
 
 
 #profile

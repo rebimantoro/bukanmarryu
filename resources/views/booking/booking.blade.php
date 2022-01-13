@@ -15,28 +15,32 @@
                 </div>
 
             </div>
-
-            <div class="col text-center">
+            <?php 
+            $no = 1;
+            ?>
+            @foreach ($booking as $key)
+            <div class="col-4">
                 <br>
                 <div class="card" style="width: 18rem;">
-                <img src="{{asset('Template/images/m1.png')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5>Bookingan Pertama</h5>
+                    <h5>Bookingan Nomor {{ $no }}</h5>
                     <br>
                     <p class="card-text" style="text-align: justify;">
-                    Dipesan pada : 11/01/2021</p>
+                    Dipesan pada :</p>
+                    <b><p> {{ $key->created_at }}</p></b>
                 </div>
                 <ul class="list-group list-group-flush" style="text-align: justify;">
-                    <li class="list-group-item">Total Harga : <b>Rp48.606</b></li>
-                    <li class="list-group-item">Status : <b>Belum Terverifikasi</b> </b></li>
+                    <li class="list-group-item">Total Harga : <b>Rp.{{ $key->total_price }}</b></li>
+                    <li class="list-group-item">Status : <b>{{ $key->status }}</b> </b></li>
                     <li class="list-group-item">
-                    <a href="/tracking" class="btn" style="background-color: red;color:white;font-size: 0.9rem;">Kembalikan Barang</a>
-                    <a href="/tracking" class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;">Detail</a>
+                    <button class="btn" style="background-color:blue ;color:white;font-size: 0.9rem;">Berikan Feedback</button>
+                    <button class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;">Detail</button>
                     </li>
                 </ul>
                 </div>
             </div>
-
+            <?php $no= $no+1?>
+            @endforeach
             </div>
         </div>
 

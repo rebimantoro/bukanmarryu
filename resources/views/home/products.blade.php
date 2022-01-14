@@ -123,9 +123,6 @@ active
                         </form>
                         
                         @endguest
-                        <a href="/checkout" class="option2">
-                            Booking Now
-                        </a>
                     </div>
                 </div>
                 <div class="img-box">

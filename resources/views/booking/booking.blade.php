@@ -105,6 +105,7 @@
                       <form action="/booking/feedback/{{ $key->id }}" method="POST">
                         @csrf
                         <input type="hidden" value="{{ Auth::user()->id }}" name="id_user">
+                        <input type="hidden" value="{{ Auth::user()->picture }}" name="picture">
                         <input type="hidden" value="{{ $key->first_name }} {{ $key->last_name }}" name="name">
                         <input type="hidden" value="no" name="show">
                         <input type="hidden" value="yes" name="feedback">

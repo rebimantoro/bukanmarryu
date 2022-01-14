@@ -18,6 +18,7 @@ class CreateFeedbackTable extends Migration
             $table->timestamps();
             $table->string('id_booking');
             $table->string('id_user');
+            $table->string('picture');
             $table->string('name');
             $table->string('desc');
             $table->string('show');

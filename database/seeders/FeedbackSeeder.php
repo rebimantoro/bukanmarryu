@@ -16,10 +16,12 @@ class FeedbackSeeder extends Seeder
     {
         $feedback = [
             [
-                'name' => 'Iqbaal Ramadhan',
+                'id_user' => 2,
+                'id_booking' => 'not_real',
+                'name' => 'Muhammad Rizal Bimantoro',
                 'desc' => 'Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya',
-                'created_at' => "2022-01-12 10:37:53",
                 'show' => 'yes',
+                'picture' => 'user5.jpg',
             ],
         ];
 

@@ -31,6 +31,7 @@ class BookingController extends Controller
             'name' => $request['name'],
             'desc' => $request['desc'],
             'show' => $request['show'],
+            'picture' => $request['picture'],
         ]);
         $booking = Booking::find($id);
         $booking->feedback = $request->feedback;

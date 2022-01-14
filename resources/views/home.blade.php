@@ -604,7 +604,7 @@ active
                         <div class="img_container">
                            <div class="img-box">
                               <div class="img_box-inner">
-                                 <img src="{{asset('Template/images/profile.jpg')}}" alt="">
+                                 <img src="{{asset('Template/images/'.$key->picture.'')}}" alt="">
                               </div>
                            </div>
                         </div>

@@ -39,11 +39,58 @@ active
                         <div class="col-md-12 md-5">
                             <div class="title">
                                 <ul class="categiri">
-                                    <li class="active"><a href="#">Man</a></li>
-                                    <li><a >Women</a></li>
-                                    <li><a >Accessories</a></li>
-                                    <li><a >Decoration</a></li>
-                                    <li><a >Other</a></li>
+                                    <?php 
+                                    $man= 'Man';
+                                    $women = 'Woman';
+                                    $accessories = 'Accessoris';
+                                    $decoration = 'Decoration';
+                                    $other = 'Other';
+                                    ?>
+                                    @if(isset($categorie))
+                                    @if($categorie=="Man")
+                                    <li class=""><a href="/products">All</a></li>
+                                    <li class="active"><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class=""><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class=""><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class=""><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class=""><a href="/products/{{ $other }}">Other</a></li>
+                                    @elseif($categorie=="Woman")
+                                    <li class=""><a href="/products">All</a></li>
+                                    <li class=""><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class="active"><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class=""><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class=""><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class=""><a href="/products/{{ $other }}">Other</a></li>
+                                    @elseif($categorie=="Accessoris")
+                                    <li class=""><a href="/products">All</a></li>
+                                    <li class=""><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class=""><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class="active"><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class=""><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class=""><a href="/products/{{ $other }}">Other</a></li>
+                                    @elseif($categorie=="Decoration")
+                                    <li class=""><a href="/products">All</a></li>
+                                    <li class=""><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class=""><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class=""><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class="active"><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class=""><a href="/products/{{ $other }}">Other</a></li>
+                                    @elseif($categorie=="Other")
+                                    <li class=""><a href="/products">All</a></li>
+                                    <li class=""><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class=""><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class=""><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class=""><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class="active"><a href="/products/{{ $other }}">Other</a></li>
+                                    @endif
+                                    @else
+                                    <li class="active"><a href="/products">All</a></li>
+                                    <li class=""><a href="/products/{{ $man }}">Man</a></li>
+                                    <li class=""><a href="/products/{{ $women }}">Women</a></li>
+                                    <li class=""><a href="/products/{{ $accessories }}">Accessories</a></li>
+                                    <li class=""><a href="/products/{{ $decoration }}">Decoration</a></li>
+                                    <li class=""><a href="/products/{{ $other }}">Other</a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>

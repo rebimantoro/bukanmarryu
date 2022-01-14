@@ -33,6 +33,13 @@ class ViewDataController extends Controller
         $product = Product::paginate(6);
         return view('Home.products', compact('product'));
     }
+
+    public function indexCategoryProduct($id)
+    {
+        $product = Product::where('categorie', $id)->paginate(6);
+        $categorie = $id;
+        return view('Home.products', compact('product', 'categorie'));
+    }
     public function indexContact()
     {
         return view('Home.contact');

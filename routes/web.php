@@ -43,6 +43,7 @@ Route::get('admin/testimoni/hide/{id}', [BookingController::class, 'testimoniHid
 Route::get('/', [ViewDataController::class, 'index']);
 Route::get('/register', [ViewDataController::class, 'register']);
 Route::get('/products', [ViewDataController::class, 'indexProduct']);
+Route::get('/products/{id}', [ViewDataController::class, 'indexCategoryProduct']);
 Route::get('/gallery', [ViewDataController::class, 'indexGallery']);
 Route::get('/contact', [ViewDataController::class, 'indexContact']);
 Route::get('/profile/{id}', [ViewDataController::class, 'indexProfile']);

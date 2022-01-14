@@ -24,7 +24,7 @@ active
                 <td>{{ $key->id }}</td>
                 <td>{{ $key->name }}</td>
                 <td>{{ $key->created_at }}</td>
-                <td width="600px">{{ $key->desc }}</td>
+                <td width="400px">{{ $key->desc }}</td>
                 <td>{{ $key->show }}</td>
                 <td>
                     <div>

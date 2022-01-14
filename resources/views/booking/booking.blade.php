@@ -28,9 +28,12 @@
                     <p class="card-text" style="text-align: justify;">
                     Dipesan pada :</p>
                     <b><p> {{ $key->created_at }}</p></b>
+
                 </div>
                 <ul class="list-group list-group-flush" style="text-align: justify;">
                     <li class="list-group-item">Total Harga : <b>Rp.{{ $key->total_price }}</b></li>
+                    <li class="list-group-item">Status : <b>{{ $key->status }}</b></li>
+
                     <li class="list-group-item">
                       @if ($key->proof=="NULL.png")
                       <form method="post" action="/booking/{{ $key->id }}" enctype="multipart/form-data">

@@ -14,7 +14,7 @@ class GalleryController extends Controller
 
     public function galleryAdmin()
     {
-        $gallery = Gallery::all();
+        $gallery = Gallery::paginate(5);
         $jumlah = Gallery::count();
         return view('gallery.index', compact('gallery', 'jumlah'));
     }

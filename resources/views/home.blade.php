@@ -22,10 +22,10 @@ active
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    #MarryU
                                     </span>
                                     <br>
-                                    On Everything
+                                    DreamComeTrue
                                  </h1>
                                  <p>
                                     Hari pernikahan adalah momen yang diimpikan oleh para calon pengantin. Setiap pasangan pasti ingin merealisasikan konsep pernikahan yang telah lama diidamkan agar berkesan seumur hidupnya. Maka dari itu, diperlukan pertimbangan yang matang saat akan menentukan gaya pernikahan agar tidak menyesal.
@@ -55,7 +55,7 @@ active
                                     On Everything
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                    MarryU sedang melaksanakan diskon dalam peluncuran website yang membantu memberikan kemudahan dan kenyamanan sebagai langkah awal MarryU untuk menjadi sebuah startup yang dapat mempermudah dan mempercepat persiapan pernikahan masyarakat melalui kemajuan teknologi. Segera lakukan pemesanan saat ini juga!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
@@ -68,38 +68,12 @@ active
                      </div>
                   </div>
 
-                  <!-- Caraousell slide 3 -->
-                  <div class="carousel-item">
-                     <div class="container ">
-                        <div class="row">
-                           <div class="col-md-7 col-lg-6 ">
-                              <div class="detail-box">
-                                 <h1>
-                                    <span>
-                                    Sale 20% Off
-                                    </span>
-                                    <br>
-                                    On Everything
-                                 </h1>
-                                 <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                                 </p>
-                                 <div class="btn-box">
-                                    <a href="" class="btn1">
-                                    Shop Now
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+
                </div>
                <div class="container">
                   <ol class="carousel-indicators">
                      <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
                      <li data-target="#customCarousel1" data-slide-to="1"></li>
-                     <li data-target="#customCarousel1" data-slide-to="2"></li>
                   </ol>
                </div>
             </div>
@@ -588,7 +562,7 @@ active
                         </div>
                         <div class="detail-box">
                            <h5>
-                              Tasya Lu'Lu Armina
+                              Tasya LuLu Armina
                            </h5>
                            <h6>
                               Customer
@@ -596,6 +570,28 @@ active
                            <p>
                               website ini memberikan saya pilihan dekorasi yang sangat cantik membuat pernikahan saya terlihat menyenangkan dan tidak terlupakan!
                            </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="carousel-item">
+                     <div class="box col-lg-10 mx-auto">
+                        <div class="img_container">
+                           <div class="img-box">
+                              <div class="img_box-inner">
+                                 <img src="{{asset('Template/images/user2.jpg')}}" alt="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="detail-box">
+                           <h5>
+                              Muh. Taufiqurrahman
+                           </h5>
+                           <h6>
+                              Customer
+                           </h6>
+                           <p>
+                              Website ini cukup membantu saya saat mempersiapkan pesta pernikahan, saya jadi tidak bingung lagi mengenai tema apa yang harus saya pakai di pernikahan saya                           </p>
                         </div>
                      </div>
                   </div>

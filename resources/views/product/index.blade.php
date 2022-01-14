@@ -10,6 +10,7 @@ active
     <div class="col-10">
         <div class="container">
             <a href="/admin/product/create" class="btn btn-primary">Add Product</a>
+
             <table class="table table-striped">
             <thead>
                 <tr>
@@ -63,5 +64,6 @@ active
     </div>
     <div class="col-1"></div>
 </div>
+
 
 @endsection

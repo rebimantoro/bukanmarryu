@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg custom_nav-container "">
+<nav class="navbar navbar-expand-lg custom_nav-container ">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img width="250" src="{{asset('Template/images/logo.png')}}" alt="#" />

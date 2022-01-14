@@ -51,7 +51,7 @@
                     <strong>Rp.{{ $total }}</strong>
                 @else
                 <span>Total</span>
-                <strong> <del>Rp.{{ $total }}</del>  Rp.{{$diskon  }}</strong>
+                <span><del>Rp.{{ $total }}</del> <strong> Rp.{{$diskon  }}</strong></span>
                 @endif
                 </li>
             </ul>
@@ -74,7 +74,7 @@
                 <input type="hidden" value="no" name="feedback">
                 <input type="hidden" value="Belum Terkonfirmasi" name="status">
                 <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <label for="firstName">First name</label>
                     <input type="text" class="form-control" id="firstName" placeholder="First Name" value="" required name="first_name">
                     <div class="invalid-feedback">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 ">
                     <label for="lastName">Last name</label>
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="" required name="last_name">
                     <div class="invalid-feedback">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="row">
 
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <label for="state">Kota</label>
                     <select class="custom-select d-block w-100" id="state" required name="city">
                         <option selected="selected" disabled="disabled" value="">Pilih Kota</option>
@@ -137,7 +137,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-6 mb-3">
                     <label for="zip">Kode Pos</label>
                     <input type="text" class="form-control" id="zip" placeholder="" required name="postal_code">
                     <div class="invalid-feedback">

@@ -55,46 +55,23 @@ active
             <div class="row text-center my-5">
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team1.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
-                    </a>
-                    <div class="text-center my-4">
-                        <h4 class="card-main-font">Fitria Dewi Wulandari</h4>
-                        <p class="card-desc-font">Founder | Team Lead & Business Development</p>
-                        <!-- <a class="btn" target="_blank" href=""><i class="fa fa-instagram"></i></a>
-                        <a class="btn" target="_blank" href=""><i class="fa fa-linkedin-square"></i></a> -->
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <a target="_blank" href="">
                         <img src="{{asset('Template/images/team2.png')}}" width="200px" height="200px" class="rounded-circle" alt="Erza Putra Albasori">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">M. Rizal Bimantoro</h4>
-                        <p class="card-desc-font">Co-Founder | Software Engineer</p>
+                        <p class="card-desc-font">Fullstack Developer</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team3.png')}}" width="200px" height="200px" class="rounded-circle" alt="Wiguna Ramadhan">
+                        <img src="{{asset('Template/images/team1.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
                     </a>
                     <div class="text-center my-4">
-                        <h4 class="card-main-font">Pradita Cahyani</h4>
-                        <p class="card-desc-font">Co-Founder | Software Engineer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- team baris 2 -->
-            <div class="row text-center my-5">
-                <div class="col-md-4">
-                    <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team4.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
-                    </a>
-                    <div class="text-center my-4">
-                        <h4 class="card-main-font">Tiara Dwi Syaputri</h4>
-                        <p class="card-desc-font">Founder | Team Lead & Business Development</p>
+                        <h4 class="card-main-font">Fitria Dewi Wulandari</h4>
+                        <p class="card-desc-font">Back-End Developer</p>
+                        <!-- <a class="btn" target="_blank" href=""><i class="fa fa-instagram"></i></a>
+                        <a class="btn" target="_blank" href=""><i class="fa fa-linkedin-square"></i></a> -->
                     </div>
                 </div>
 
@@ -104,9 +81,33 @@ active
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Muh. Taufiqurrahman</h4>
-                        <p class="card-desc-font">Co-Founder | Software Engineer</p>
+                        <p class="card-desc-font">Front-End Developer</p>
                     </div>
                 </div>
+
+            <!-- team baris 2 -->
+            <div class="row text-center my-5">
+            <div class="col-md-4">
+                    <a target="_blank" href="">
+                        <img src="{{asset('Template/images/team3.png')}}" width="200px" height="200px" class="rounded-circle" alt="Wiguna Ramadhan">
+                    </a>
+                    <div class="text-center my-4">
+                        <h4 class="card-main-font">Pradita Cahyani</h4>
+                        <p class="card-desc-font">Front-End Developer</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <a target="_blank" href="">
+                        <img src="{{asset('Template/images/team4.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
+                    </a>
+                    <div class="text-center my-4">
+                        <h4 class="card-main-font">Tiara Dwi Syaputri</h4>
+                        <p class="card-desc-font">Back-End Developer</p>
+                    </div>
+                </div>
+
+
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
@@ -114,7 +115,7 @@ active
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Tasya Lu'Lu Armina W.</h4>
-                        <p class="card-desc-font">Co-Founder | Software Engineer</p>
+                        <p class="card-desc-font">Front-End Developer</p>
                     </div>
                 </div>
             </div>

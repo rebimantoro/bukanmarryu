@@ -82,7 +82,6 @@
                             </td>
                         </tr>
                         @endforeach
-                       
 
 
                     </tbody>
@@ -99,8 +98,8 @@
                     @if ($total==0)
                     <h3>Rp.{{ $total }}</h3>
                     @else
-                    <del><h3>Rp.{{ $total }}</h1></del>
-                    <h3>Rp.{{ $diskon }}</h1> 
+                    <del><a>Rp.{{ $total }}</a></del>
+                    <h2>Rp.{{ $diskon }}</h2> 
                     @endif
                     
                 </div>

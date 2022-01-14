@@ -50,7 +50,11 @@ active
 @endif
 
 
+<div class="pagination justify-content-center mt-5">
 
+{{$product -> links()}}
+
+</div>
     
 
 

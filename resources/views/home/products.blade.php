@@ -23,7 +23,7 @@ active
                 <div class="col-md-6">
                     <form action="/products">
                     <div class="input-group rounded">
-                        <input type="search" name="search" style="height=20px;" class="form-control rounded" placeholder="Cari Product Disini" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="text" name="search" style="height=20px;" class="form-control rounded" placeholder="Cari Product Disini" aria-label="Search" aria-describedby="search-addon" value="{{request('search')}}"/>
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
                         </div>
@@ -133,7 +133,7 @@ active
                     {{ $key->title }}
                     </h5>
                     <h6>
-                    {{ $key->price }}
+                    <a>Rp. </a>{{ $key->price }}
                     </h6>
                 </div>
             </div>

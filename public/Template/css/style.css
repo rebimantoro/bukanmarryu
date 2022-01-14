@@ -10,6 +10,53 @@ body {
     overflow-x: hidden;
 }
 
+
+/** Categories section **/
+
+.Categories {
+    background: #fff;
+    padding-top: 130px;
+}
+
+.categiri {
+    list-style-type: none;
+    color: #000;
+    font-weight: 100;
+}
+
+.trending .trending-box h3 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 28px;
+    padding: 20px 20px;
+}
+
+ul.categiri li {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+}
+
+ul.categiri li.active a {
+    background: #A78758;
+    color: #fff;
+}
+
+ul.categiri li a {
+    padding: 10px 12px;
+    font-weight: 500;
+    font-size: 19px;
+    color: #000;
+}
+
+ul.categiri li a:hover {
+    background: #A78758;
+    color: #fff;
+}
+
+
+/** end Categories section **/
+
 .layout_padding {
     padding: 70px 0;
 }
@@ -1393,47 +1440,6 @@ i {
 .social-icon {
     color: #A78758;
 }
-
-
-/** Categories section **/
-
-.Categories {
-    background: #fff;
-    padding-top: 130px;
-}
-
-.trending .trending-box h3 {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 28px;
-    color: #050000;
-    padding: 20px 20px;
-}
-
-ul.categiri li {
-    display: inline-block;
-    padding: 0;
-    text-decoration: none;
-}
-
-ul.categiri li.active a {
-    background: #A78758;
-    color: #fff;
-}
-
-ul.categiri li a {
-    padding: 10px 12px;
-    font-weight: 500;
-    font-size: 19px;
-}
-
-ul.categiri li a:hover {
-    background: #A78758;
-    color: #fff;
-}
-
-
-/** end Categories section **/
 
 
 /* Footer */

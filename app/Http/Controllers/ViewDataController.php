@@ -30,7 +30,15 @@ class ViewDataController extends Controller
     }
     public function indexProduct()
     {
-        $product = Product::paginate(6);
+        $search = request()->query('search');
+        if ($search){
+            $product = Product::where('title', 'like', "%{$search}%")->paginate(6);
+
+        }
+        else{
+            $product = Product::paginate(6);
+        }
+
         return view('Home.products', compact('product'));
     }
 

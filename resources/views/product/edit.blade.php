@@ -10,11 +10,11 @@
     @csrf
   <div class="mb-3">
     <label for="exampleInputText" class="form-label">Title</label>
-    <input type="text" class="form-control" name="title" value="{{$product->title}}" >
+    <input type="text" class="form-control" name="title" value="{{$product->title}}" required>
   </div>
   <div class="mb-3">
     <label for="exampleInputText" class="form-label">Price</label>
-    <input type="number" class="form-control" name="price" value="{{$product->price}}">
+    <input type="number" class="form-control" name="price" value="{{$product->price}}" required>
   </div>
   <div class="mb-3">
     <label for="exampleInputText" class="form-label">Category</label>
@@ -31,7 +31,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputText" class="form-label">Description</label>
-    <input type="text" class="form-control" name="desc" value="{{$product->desc}}">
+    <input type="text" class="form-control" name="desc" value="{{$product->desc}} " required>
   </div>
   <div class="mb-3">
     <label for="exampleInputFile" class="form-label">Picture</label><br>

@@ -31,8 +31,27 @@
                 </div>
                 <ul class="list-group list-group-flush" style="text-align: justify;">
                     <li class="list-group-item">Total Harga : <b>Rp.{{ $key->total_price }}</b></li>
-                    <li class="list-group-item">Status : <b>{{ $key->status }}</b> </b></li>
                     <li class="list-group-item">
+                      @if ($key->proof=="NULL.png")
+                      <form method="post" action="/booking/{{ $key->id }}" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" value="{{ Auth::user()->id}}" name="id_user">
+                        <div class="mb-3">
+                        <p class="text-danger">Anda Belum memasukan Bukti Transfer pada Pesanan Ini</p>
+                        <label for="bukti_transfer" class="form-label">Masukkan Bukti Transfer</label>
+                        <input class="form-control" type="file" id="proof" name="proof">
+                        </div>
+                        <div class="mb-3" style="float: left;">
+                        <button type="submit" class="btn" style="background-color: green;color: white;" type="submit">Kirim</button>
+                        <b class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#detail{{ $key->id }}">Detail</b>
+                        </div>
+                    </li>
+                  </form>
+                  @else
+                  <li class="list-group-item">
+                    @if ($key->proof=="NULL.jpg")
+                    
+                    @endif
                     @if ($key->status=="Dikirim")
                     @if ($key->feedback=="no")
                     <button class="btn" style="background-color:blue ;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#feedback{{ $key->id }}">Berikan Feedback</button>
@@ -43,6 +62,8 @@
                     @endif
                     <button class="btn" style="background-color: lightseagreen;color:white;font-size: 0.9rem;" data-bs-toggle="modal" data-bs-target="#detail{{ $key->id }}">Detail</button>
                     </li>
+                  @endif
+                   
                 </ul>
                 </div>
             </div>

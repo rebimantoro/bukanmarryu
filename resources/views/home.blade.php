@@ -600,6 +600,7 @@ active
                      </div>
                   </div>
 
+                  @if (isset($feedback))
                   @foreach($feedback as $key)
                   @if ($key->show == "yes")
                   <div class="carousel-item">
@@ -626,6 +627,7 @@ active
                   </div>
                   @endif
                   @endforeach
+                  @endif
 
                </div>
 

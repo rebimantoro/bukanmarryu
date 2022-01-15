@@ -55,7 +55,7 @@ active
             <div class="row text-center my-5">
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team2.png')}}" width="200px" height="200px" class="rounded-circle" alt="Erza Putra Albasori">
+                        <img src="{{asset('Template/images/team2.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">M. Rizal Bimantoro</h4>
@@ -65,7 +65,7 @@ active
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team1.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
+                        <img src="{{asset('Template/images/team1.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Fitria Dewi Wulandari</h4>
@@ -77,7 +77,7 @@ active
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team5.png')}}" width="200px" height="200px" class="rounded-circle" alt="Erza Putra Albasori">
+                        <img src="{{asset('Template/images/team5.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Muh. Taufiqurrahman</h4>
@@ -89,7 +89,7 @@ active
             <div class="row text-center my-5">
             <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team3.png')}}" width="200px" height="200px" class="rounded-circle" alt="Wiguna Ramadhan">
+                        <img src="{{asset('Template/images/team3.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Pradita Cahyani</h4>
@@ -99,7 +99,7 @@ active
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team4.png')}}" width="200px" height="200px" class="rounded-circle" alt="Hasan M Dipo">
+                        <img src="{{asset('Template/images/team4.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Tiara Dwi Syaputri</h4>
@@ -111,7 +111,7 @@ active
 
                 <div class="col-md-4">
                     <a target="_blank" href="">
-                        <img src="{{asset('Template/images/team6.png')}}" width="200px" height="200px" class="rounded-circle" alt="Wiguna Ramadhan">
+                        <img src="{{asset('Template/images/team6.png')}}" width="200px" height="200px" class="rounded-circle">
                     </a>
                     <div class="text-center my-4">
                         <h4 class="card-main-font">Tasya Lu'Lu Armina W.</h4>

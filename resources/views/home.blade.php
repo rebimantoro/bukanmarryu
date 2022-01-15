@@ -378,9 +378,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -391,10 +388,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Men's Shirt
+                           Kemeja Putih
                         </h5>
                         <h6>
-                           $75
+                           Rp.100000
                         </h6>
                      </div>
                   </div>
@@ -404,9 +401,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -417,10 +411,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Women's Dress
+                           Sepatu Putih
                         </h5>
                         <h6>
-                           $70
+                           Rp.49999
                         </h6>
                      </div>
                   </div>
@@ -430,9 +424,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -443,10 +434,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Women's Dress
+                           Pentopel Hitam
                         </h5>
                         <h6>
-                           $80
+                           Rp.90000
                         </h6>
                      </div>
                   </div>
@@ -456,9 +447,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -469,10 +457,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Men's Shirt
+                           Gaun Putih
                         </h5>
                         <h6>
-                           $65
+                           Rp.350000
                         </h6>
                      </div>
                   </div>
@@ -482,9 +470,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -495,10 +480,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Men's Shirt
+                           Mahkota Emas
                         </h5>
                         <h6>
-                           $65
+                           Rp.49999
                         </h6>
                      </div>
                   </div>
@@ -507,9 +492,6 @@ active
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="/products" class="option1">
-                           Add To Cart
-                           </a>
                            <a href="/products" class="option2">
                            Booking Now
                            </a>
@@ -520,10 +502,10 @@ active
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Women's Dress
+                           Set Dekorasi
                         </h5>
                         <h6>
-                           $65
+                           Rp.620000
                         </h6>
                      </div>
                   </div>

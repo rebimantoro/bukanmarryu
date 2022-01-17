@@ -58,7 +58,7 @@ active
                                     MarryU sedang melaksanakan diskon dalam peluncuran website yang membantu memberikan kemudahan dan kenyamanan sebagai langkah awal MarryU untuk menjadi sebuah startup yang dapat mempermudah dan mempercepat persiapan pernikahan masyarakat melalui kemajuan teknologi. Segera lakukan pemesanan saat ini juga!
                                  </p>
                                  <div class="btn-box">
-                                    <a href="" class="btn1">
+                                    <a href="/products" class="btn1">
                                     Shop Now
                                     </a>
                                  </div>

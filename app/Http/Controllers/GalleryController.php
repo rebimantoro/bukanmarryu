@@ -62,7 +62,6 @@ class GalleryController extends Controller
     public function destroy($id)
     {
         $gallery = Gallery::find($id);
-        $jumlah = Gallery::count();
         $gallery->delete();
         return redirect('/admin/gallery');
     }

@@ -22,18 +22,6 @@ active
                 </thead>
                 <tbody>
                     
-            <?php
-        if (isset($_POST['delete'])) {
-            $hapus = $_POST['delete'];
-            $delete_query = "DELETE FROM bookings WHERE id= '$hapus'";
-            $delete = mysqli_query($conn, $delete_query);
-            echo "<div class='alert alert-success alert-dismissible fade show fade in' role='alert'>";
-            echo 'Hapus Booking Berhasil';
-            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-            echo '</button>';
-            echo '</div>';
-        }
-        ?>
                     @if($jumlah == 0)
                     <tr>
                         <td colspan="5" align="center"><b>No Data</b></td> 

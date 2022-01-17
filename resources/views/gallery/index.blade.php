@@ -27,17 +27,16 @@ active
                         <td colspan="5" align="center"><b>No Data</b></td> 
                     </tr>
                     @else
-                    <?php $i=1;?>
-                    @foreach($gallery as $key)
+                    @foreach($gallery as $key=>$item)
                     <tr>
-                    <th scope="row">{{ $i }}</th>
-                    <td>{{ $key->title }}</td>
-                    <td><img src="{{asset('Template/images/'.$key->picture.'')}}" width="150px"></td>
-                    <td>{{ $key->desc }}</td>
+                    <th scope="row">{{ $gallery->firstItem() + $key}}</th>
+                    <td>{{ $item->title }}</td>
+                    <td><img src="{{asset('Template/images/'.$item->picture.'')}}" width="150px"></td>
+                    <td>{{ $item->desc }}</td>
                     <td>
                         <div class="d-flex flex-row bd-highlight">
-                            <a href="/admin/gallery/{{$key->id}}/edit" class="btn btn-warning">Edit</a>
-                            <form action="/admin/gallery/{{$key->id}}/delete" method="POST">
+                            <a href="/admin/gallery/{{$item->id}}/edit" class="btn btn-warning">Edit</a>
+                            <form action="/admin/gallery/{{$item->id}}/delete" method="POST">
                                 @csrf
                                 <button class="btn btn-danger" type="submit" name="delete">Delete</button>
                                 
@@ -46,7 +45,6 @@ active
                         
                     </td>
                     </tr>
-                    <?php $i=$i+1; ?>
                     @endforeach
                     
                     @endif

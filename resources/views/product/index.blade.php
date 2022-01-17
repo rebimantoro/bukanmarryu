@@ -29,19 +29,18 @@ active
                     <td colspan="7" align="center"><b>No Data</b></td> 
                 </tr>
                 @else
-                <?php $i=1;?>
-                @foreach($product as $key)
+                @foreach($product as $key=> $item)
                 <tr>
-                <th scope="row">{{ $key->id }}</th>
-                <td>{{ $key->title }}</td>
-                <td>{{ $key->price }}</td>
-                <td>{{ $key->categorie }}</td>
-                <td><img src="{{asset('Template/images/'.$key->picture.'')}}" width="150px"></td>
-                <td>{{ $key->desc }}</td>
+                <th scope="row">{{ $product->firstItem() + $key }}</th>
+                <td>{{ $item->title }}</td>
+                <td>{{ $item->price }}</td>
+                <td>{{ $item->categorie }}</td>
+                <td><img src="{{asset('Template/images/'.$item->picture.'')}}" width="150px"></td>
+                <td>{{ $item->desc }}</td>
                 <td>
                     <div class="d-flex flex-row bd-highlight">
-                        <a href="/admin/product/{{$key->id}}/edit" class="btn btn-warning">Edit</a>
-                        <form action="/admin/product/{{$key->id}}/delete" method="POST">
+                        <a href="/admin/product/{{$item->id}}/edit" class="btn btn-warning">Edit</a>
+                        <form action="/admin/product/{{$item->id}}/delete" method="POST">
                             @csrf
                             <button class="btn btn-danger ms-2" type="submit">Delete</button>
                         </form>
@@ -49,7 +48,7 @@ active
                     
                 </td>
                 </tr>
-                <?php $i++; ?>
+
                 @endforeach
                 @endif
             </tbody>
